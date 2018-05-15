@@ -102,8 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-ls='ls -Alh --color'
-syslog='tail -f /var/log/syslog'
+alias ls='ls -Alh --color'
+alias syslog='tail -f /var/log/syslog'
 
 function log(){
     if [ "$1" != "" ]
