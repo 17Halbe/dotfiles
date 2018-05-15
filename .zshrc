@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls='ls -Alh --color'
+alias ls='ls -Ap --group-directories-first --color'
 alias syslog='tail -f /var/log/syslog'
 
 function log(){
@@ -121,7 +121,7 @@ cdUndoKey() {
   popd
   zle       reset-prompt
   echo
-  ls -A
+  ls
   zle       reset-prompt
 }
 
@@ -129,12 +129,12 @@ cdParentKey() {
   pushd ..
   zle      reset-prompt
   echo
-  ls -A
+  ls
   zle       reset-prompt
 }
 
 chpwd() {
-  ls -A
+  ls
 }
 
 zle -N                 cdParentKey
