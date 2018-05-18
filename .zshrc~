@@ -157,9 +157,9 @@ fo() {
   out=($(fzf-tmux --query="$1" --exit-0 --expect=ctrl-o,ctrl-e))
   key=$(cut -f1 -d ' ' <<< "$out")
   file=$(cut -f2 -d ' '  <<< "$out")
-  if [ -n "$file" ]; then
-    [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
-  fi
+  #if [ -n "$file" ]; then
+  #  [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
+  #fi
 }
 source ~/.zpyi/zpyi.zsh
 
